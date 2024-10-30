@@ -1,8 +1,9 @@
 import express from "express";
+import { books } from "../db/books";
 const app = express();
 
-app.get("/", function (req, res) {
-  res.send("Hello World!");
+app.get("/books", function (req, res) {
+  res.send(books);
 });
 
-app.listen(3000);
+export default app;
